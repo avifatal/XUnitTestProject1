@@ -10,6 +10,8 @@ namespace XUnitTestProject1
         [Fact]
         public void Test1()
         {
+            Licensing.RegisterLicense(@"...");
+
             TestAppHostInitializer test = new TestAppHostInitializer();
             test.Init().Start("http://localhost:2000");
         }
@@ -72,15 +74,15 @@ namespace XUnitTestProject1
     public class MyServices : Service
     {
         public object Any (MyRequest1 request) => null;
-        public object Any1(MyRequest2 request) => null;
-        public object Any2(MyRequest3 request) => null;
-        public object Any4(MyRequest4 request) => null;
-        public object Any5(MyRequest5 request) => null;
-        public object Any6(MyRequest6 request) => null;
-        public object Any7(MyRequest7 request) => null;
-        public object Any8(MyRequest8 request) => null;
-        public object Any9(MyRequest9 request) => null;
-        public object Any10(MyRequest10 request) => null;
-        public object Any11(MyRequest11 request) => null;
+        public object Any(MyRequest2 request) => null;
+        public object Any(MyRequest3 request) => null;
+        public object Any(MyRequest4 request) => null;
+        public object Any(MyRequest5 request) => null;
+        public object Any(MyRequest6 request) => null;
+        public object Any(MyRequest7 request) => null;
+        public object Any(MyRequest8 request) => null;
+        public object Any(MyRequest9 request) => null;
+        public object Any(MyRequest10 request) => null;
+        public object Any(MyRequest11 request) => null;
     }
 }
